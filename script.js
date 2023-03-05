@@ -56,7 +56,11 @@ const getWeather = async (city) => {
         // wind_degrees.innerHTML = result.wind_degrees
         wind_speed.innerHTML = result.wind_speed
         wind_speed1.innerHTML = result.wind_speed + "Km/hr"
+        if (result.temp < 10) {
+            tempgif.src = "./gifs/snowy.gif"
+        }
         console.log(result)
+
     } catch (error) {
         console.log(error)
     }
@@ -66,10 +70,10 @@ clicker.addEventListener("click", (e) => {
     getWeather(cityin.value)
 })
 getWeather("Delhi")
-rowweather("shanghai")
-rowweather("boston")
-rowweather("lucknow")
-rowweather("kolkata")
+// rowweather("shanghai")
+// rowweather("boston")
+// rowweather("lucknow")
+// rowweather("kolkata")
 
 // fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Seattle', options)
 //     .then(response => response.json())
