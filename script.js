@@ -72,10 +72,12 @@ clicker.addEventListener("click", (e) => {
     getWeather(cityin.value)
 })
 getWeather("Delhi")
-// rowweather("shanghai")
-// rowweather("boston")
-// rowweather("lucknow")
-// rowweather("kolkata")
+loadbtn.addEventListener("click",()=>{
+    rowweather("shanghai")
+    rowweather("boston")
+    rowweather("lucknow")
+    rowweather("kolkata")
+})
 
 // fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Seattle', options)
 //     .then(response => response.json())
