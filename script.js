@@ -58,6 +58,8 @@ const getWeather = async (city) => {
         wind_speed1.innerHTML = result.wind_speed + "Km/hr"
         if (result.temp < 10) {
             tempgif.src = "./gifs/snowy.gif"
+        }else{
+            tempgif.src = "./gifs/sunny.gif"
         }
         console.log(result)
 
